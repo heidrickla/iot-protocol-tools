@@ -1,0 +1,50 @@
+# Culligan reverse-engineering workspace.
+#
+# The shipped integration lives in ../ha-culligan-azure - this directory keeps
+# only the diagnostic tooling. Everything the tooling PRODUCES is secret, so the
+# ignores below are deliberately aggressive: it is far easier to un-ignore one
+# file deliberately than to scrub a token out of git history.
+
+# --- capture output: auth tokens, installation address, account/dealer IDs ---
+mitm/capture/
+*.jsonl
+*.pcap
+*.pcapng
+api-summary.md
+
+# --- private keys. The mitmproxy CA can sign a certificate for anything. ---
+mitm/conf/
+probe-certs/
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# --- vendor binaries. Copyright, and large. ---
+apk/
+*.apk
+*.dex
+
+# --- anything carrying personal data ---
+dealer-email*
+FINDINGS.md
+*.creds
+.env
+*credentials*
+
+# --- runtime noise ---
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.log
+probe-certs/
+preview/
+.ruff_cache/
+.pytest_cache/
+
+# --- OS ---
+Thumbs.db
+.DS_Store
