@@ -1,6 +1,6 @@
 # Culligan traffic interception rig
 
-Everything runs from **LewisDesktop**. mitmproxy 12.2.3 is installed in `..\venv`.
+Everything runs from the workstation. mitmproxy 12.2.3 is installed in `..\venv`.
 The CA was generated during setup and lives in `conf\mitmproxy-ca-cert.pem`.
 
 There are two independent things worth intercepting, and they answer different
