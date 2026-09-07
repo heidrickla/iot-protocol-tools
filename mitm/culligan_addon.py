@@ -7,7 +7,7 @@ Two jobs:
      to a private (RFC1918) address. That would be Ayla Local Connect in action
      and would prove local control is reachable. Flagged loudly if seen.
 
-Usage (from D:\\PersonalProjects\\culligan-local):
+Usage (from the repository root):
     venv\\Scripts\\mitmdump.exe -s mitm\\culligan_addon.py --set confdir=mitm\\conf
 
 Output lands in mitm\\capture\\:

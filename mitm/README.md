@@ -20,7 +20,7 @@ Track 1 is easier. Track 2 is more valuable. Do 1 first.
 ### Start the proxy
 
 ```bash
-cd D:\PersonalProjects\culligan-local
+cd <checkout>
 venv\Scripts\mitmdump.exe -s mitm\culligan_addon.py --set confdir=mitm\conf
 ```
 
