@@ -23,6 +23,23 @@ probe-certs/
 *.cer
 
 # --- vendor binaries. Copyright, and large. ---
+# Firmware images are vendor copyright and big. fw_extract.py writes its
+# carved payloads next to them, so ignore the extraction output too.
+firmware/
+*.hdr
+*.payload.bin
+*.header.bin
+*.extracted/
+*.jffs2
+# Probe output: contains the panel's real status history and its hostname.
+tuxedo-probe-*.jsonl
+tuxedo-decay*.jsonl
+# Scratch artefacts from binary analysis (symbol caches etc).
+syms.pkl
+*.pkl
+vmlinux.bin
+mcu.bin
+kernel.bin
 apk/
 *.apk
 *.dex
@@ -48,3 +65,6 @@ preview/
 # --- OS ---
 Thumbs.db
 .DS_Store
+
+# Agent and local files stay out of the repository.
+.claude/
